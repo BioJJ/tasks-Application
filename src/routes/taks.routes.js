@@ -6,9 +6,9 @@ const taskController = require('../controllers/taskController');
 
 routes
     // tasks
-    .get('/tasks',taskController.index)
-    .post('/tasks', taskController.create)
-    .put('/tasks/:id', taskController.update)
-    .delete('/tasks/:id', taskController.delete)
+    .get('/task',taskController.index)
+    .post('/task', taskController.create)
+    .put('/task/:id', taskController.update)
+    .delete('/task/:id', taskController.delete)
 
 module.exports = routes;
