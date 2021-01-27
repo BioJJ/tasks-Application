@@ -6,7 +6,7 @@
 
 Funcionalidades desejadas: 
 
-- Adicionar uma tarefa inserindo uma descrição; 
-- Marcar ou desmarcar uma tarefa como concluída; 
-- Editar a descrição de uma tarefa; 
-- Excluir uma tarefa.
+[x] Adicionar uma tarefa inserindo uma descrição; 
+[x] Marcar ou desmarcar uma tarefa como concluída; 
+[x] Editar a descrição de uma tarefa; 
+[x] Excluir uma tarefa.

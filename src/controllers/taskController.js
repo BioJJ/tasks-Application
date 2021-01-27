@@ -24,12 +24,29 @@ module.exports = {
     },
     async update(req, res, next) {
         try {
-            const { descricao, status, titulo  } = req.body
+            const { descricao, titulo  } = req.body
             const { id } = req.params
             
             
             await knex('tasks')
-            .update({ descricao, status, titulo })
+            .update({ descricao, titulo })
+            .where({ id })
+
+            return res.send()
+
+        } catch (error) {
+            next(error)
+        }
+    },    
+    
+    async update_status(req, res, next) {
+        try {
+            const { status } = req.body
+            const { id } = req.params
+            
+            
+            await knex('tasks')
+            .update({ status })
             .where({ id })
 
             return res.send()
@@ -38,6 +55,7 @@ module.exports = {
             next(error)
         }
     },
+
     async delete(req, res, next) {
         try {
             const { id } = req.params
