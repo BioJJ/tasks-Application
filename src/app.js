@@ -5,7 +5,7 @@ const cors = require('cors');
 const app = express();
 
 const index = require('./routes/index');
-
+const tasksRoute = require('./routes/taks.routes');
 
 
 
@@ -18,6 +18,7 @@ app.use(cors());
 
 // ==> Rotas da API:
 app.use(index);
+app.use('/api/', tasksRoute);
 
 
 // notFound

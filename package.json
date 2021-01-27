@@ -5,8 +5,9 @@
   "main": "server.js",
   "scripts": {
     "dev": "nodemon",
+    "migrate": "npx knex migrate:rollback && npx knex migrate:latest && npx knex seed:run",
     "start": "node server.js",
-    "start:prod": "SET NODE_ENV=prod&&node server.js"
+    "start:prod": "NODE_ENV=prod node server.js"
   },
   "author": "Jefferson Coelho",
   "license": "ISC",
